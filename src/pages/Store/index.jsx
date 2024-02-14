@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Navbar from '../../components/navbar';
 
 const FormQuickCount = () => {
   const [formData, setFormData] = useState({
@@ -48,7 +49,9 @@ const FormQuickCount = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto mt-10">
+    <>
+      <Navbar/>
+      <div className="max-w-3xl mx-auto mt-10">
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="provinsi">
@@ -101,6 +104,8 @@ const FormQuickCount = () => {
         </div>
       </form>
     </div>
+    </>
+    
   );
 };
 

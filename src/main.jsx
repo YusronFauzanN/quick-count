@@ -10,11 +10,11 @@ import FormQuickCount from "./pages/Store";
 
 export const Router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <Home />,
   },
   {
-    path: "/login",
+    path: "/",
     element: <Login />,
   },
   {
