@@ -4,11 +4,11 @@ import { login } from "./countAction";
 const initialState = {
   isLoading: null,
   error: null,
-  movies: {
-    popularMovies: [],
-    topRatedMovies: [],
-    upcomingMovies: [],
+  user: {
+    user_id: null,
+    token: null
   },
+  count: null
 };
 
 const movieSlice = createSlice({
@@ -30,8 +30,21 @@ const movieSlice = createSlice({
     builder.addCase(login.fulfilled, (state, { payload }) => {
       state.isLoading = false;
       state.error = null;
-      state.movies.popularMovies = payload.results;
+      state.user.user_id = payload.user.id;
+      state.user.token = payload.token;
     });
+    // builder.addCase(getCount.pending, (state) => {
+    //   state.isLoading = true;
+    // });
+    // builder.addCase(getCount.rejected, (state, { payload }) => {
+    //   state.isLoading = false;
+    //   state.error = payload;
+    // });
+    // builder.addCase(getCount.fulfilled, (state, { payload }) => {
+    //   state.isLoading = false;
+    //   state.error = null;
+    //   state.count = payload.message;
+    // });
   },
 });
 

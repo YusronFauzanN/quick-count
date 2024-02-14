@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import Home from "./pages/home";
 import store from "./store";
 import Login from "./pages/login";
+import FormQuickCount from "./pages/Store";
 
 export const Router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ export const Router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/form-count",
+    element: <FormQuickCount />,
   },
   {
     path: "*",
