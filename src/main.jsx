@@ -5,13 +5,17 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import Home from "./pages/home";
 import store from "./store";
+import Login from "./pages/login";
 
 export const Router = createBrowserRouter([
   {
-    path: "/login",
+    path: "/",
     element: <Home />,
   },
-  
+  {
+    path: "/login",
+    element: <Login />,
+  },
   {
     path: "*",
     element: (
